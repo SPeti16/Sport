@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>SPORT</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css" type="text/css">
+        
+        <link href="style.css" type="text/css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+          <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="bajnoksagok.js"></script>
+  <script src="feltolt.js"></script>
+  <script>
+  $( function() {
+      
+      var seria = [
+      "Világbajnokság",
+      "Europabajnokság",
+      "Olimpia",
+      "Nemzetibajnokság"
+    ];
+    $( "#Sport_seria" ).autocomplete({
+      source: seria
+    });
+      
+      $( "#accordion" ).accordion();//{autoheight:false,collapsible:true}
+      
+      //$( "#tabs" ).bind('tabsshow',function(event,ui){
+        //$( "#accordion" ).accordion({autoheight:false,collapsible:true});
+      //});
+      
+      $( "#tabs" ).tabs();
+      
+  } );
+  </script>
+
+  
+  <link rel="stylesheet" href="options.css">
+        
+    </head>
+    <body>
+        <img src="lec.jpg" width="1000" height="300">
+        <div class="centered" role="group" aria-label="...">
+            <a href="index.html">
+            <button type="button" class="btn btn-default">KEZDŐLAP</button>
+            </a> 
+            <div class="btn-group">
+                <a href="footballH.html">
+                <button class="btn btn-default" type="button" >
+                    SPORT ESEMÉNYEK
+                    <!--<span class="caret"></span-->
+                </button>
+            </a>
+            </div>
+            
+            <div class="btn-group">
+                <a href="eredmenyek.html">
+            <button class="btn btn-default dropdown-toggle" type="button" >
+                    EREDMÉNYEK
+                </button>
+                </a>
+            </div>
+            
+            
+            
+        </div>
+        
+  <div id="tabs" class="centered2">
+  <ul>
+    <li><a href="#tabs-1">Bajnokságok</a></li>
+    <li><a href="#tabs-2">Hozzáad</a></li>
+  </ul>
+  <div id="tabs-1">
+    
+    <!--<p id="id01"></p>-->
+  
+
+  </div>
+  <div id="tabs-2">
+      <p>
+      <label for="Sport_name">Az új sport neve: </label>
+      <input id="Sport_name">
+      </p>
+      <p>
+            <label for="Sport_seria">Széria: </label>
+            <input id="Sport_seria">
+            <label for="Sport_season">    Szezon: </label>
+            <input id="Sport_season">
+      </p>
+      <p>
+           <label for="Sport_seria">startDate: </label>
+           <input id="Sport_sData">
+           <label for="Sport_season">    endDate: </label>
+           <input id="Sport_eData">
+      </p>
+      <p>
+      
+         <button id="Sport_save" onclick="Save2()" >Ment</button>
+      </p>
+     </div>
+</div>
+        
+    </body>
+</html>
